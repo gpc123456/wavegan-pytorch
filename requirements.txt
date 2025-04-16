@@ -4,4 +4,4 @@ numpy>=1.16.3
 librosa>=0.6.3
 pescador>=2.0.1
 tqdm>=4.32.1
-soundfile==soundfile 
+soundfile==0.13.1
