@@ -5,6 +5,7 @@ import torch
 import random
 import librosa
 import librosa.display
+import soundfile
 import numpy as np
 from torch.utils import data
 import matplotlib
@@ -169,7 +170,7 @@ def save_samples(epoch_samples, epoch):
     for idx, sample in enumerate(epoch_samples):
         output_path = os.path.join(sample_dir, "{}.wav".format(idx + 1))
         sample = sample[0]
-        librosa.output.write_wav(output_path, sample, sampling_rate)
+        soundfile.write(output_path, sample, sampling_rate)
 
 
 #############################
